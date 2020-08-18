@@ -20,7 +20,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ limit: '15mb', extended: false }))
   
 const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost/" + process.env.DATABASE_NAME, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 const db = mongoose.connection
 db.on('error', error => console.error(error))
 db.once('open', () => console.log('Connected to Mongoose'))

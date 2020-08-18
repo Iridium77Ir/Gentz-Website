@@ -6,6 +6,8 @@
 @import "shared/videos.css";
 @import "shared/slideshow-members.css";
 @import "shared/images.css";
+@import "shared/filepond.css";
+
 :root {
     --image-width: 800px;
     --image-width-large: 800px;

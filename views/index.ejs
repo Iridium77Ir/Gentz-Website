@@ -27,7 +27,7 @@
                         <li><h4>Instrument/Rolle:</h4></li>
                         <li><%= member.instrument %></li>
                         <li><h4>Beigetreten:</h4></li>
-                        <li><%= member.joined.toDateString() %></li>
+                        <li><%= member.joined.toDateString().split(" ")[3] %></li>
                         <li><h4>Beschreibung:</h4></li>
                         <li><%= member.description %></li>
                     </ul>

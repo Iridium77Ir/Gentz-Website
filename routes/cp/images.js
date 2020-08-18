@@ -32,13 +32,15 @@ router.post("/new", async (req, res) => {
     if (checkCookie(req) == false) {
       res.redirect("/")
     }
-    var image = new Image({
+    var img = req.body.image
+    for (var i =0; i < img.length; i++) {
+
+      var image = new Image({
       })
-      saveImage(image, req.body.image)
+      saveImage(image, img[i])
     
       try {
         const newImage = await image.save()
-        res.redirect(`/cp/images/search/${newImage.id}`)
       } catch (err) {
         console.log(err)
         res.render("images/new", {
@@ -46,6 +48,9 @@ router.post("/new", async (req, res) => {
             errorMessage: "Failed to create a new Image"
         })
       }
+
+    }
+    res.redirect("/cp/images")
 })
 // Show Image Route
 router.get('/search/:id', async (req, res) => {
