@@ -1,0 +1,13 @@
+<h2 class="page-header">All Members</h2>
+<div>
+  <ul>
+      <li><a href="/cp/members/new">New Member</a></li>
+  </ul>
+</div>
+<div class="member-grid">
+  <% members.forEach(member => { %>
+    <a href="/cp/members/search/<%= member.id %>">
+      <img class="member-image" src="<%= member.memberImagePath %>">
+    </a>
+  <% }) %>
+</div>

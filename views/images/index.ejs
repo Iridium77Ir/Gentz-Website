@@ -1,0 +1,13 @@
+<h2 class="page-header">All Images</h2>
+<div>
+  <ul>
+      <li><a href="/cp/images/new">New Image</a></li>
+  </ul>
+</div>
+<div class="image-grid">
+  <% images.forEach(image => { %>
+    <a href="/cp/images/search/<%= image.id %>">
+      <img class="image-image" src="<%= image.ImagePath %>">
+    </a>
+  <% }) %>
+</div>

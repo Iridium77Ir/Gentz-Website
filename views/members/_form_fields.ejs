@@ -1,0 +1,36 @@
+<div class="form-row">
+    <div class="form-item">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" placeholder="First Name" value="<%= member.firstName %>">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" placeholder="Last Name" value="<%= member.lastName %>">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="instrument">Instrument:</label>
+        <input type="text" name="instrument" placeholder="Instrument" value="<%= member.instrument %>">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="joined">Joined:</label>
+        <input type="date" name="joined" value="<%= member.joined == null ? '' : member.joined.toISOString().split('T')[0] %>">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="description">Description:</label>
+        <textarea name="description" placeholder="Description"><%= member.description %></textarea>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item form-item-no-grow">
+      <label for="image">Image</label>
+      <input type="file" name="image" class="member-image filepond">
+    </div>
+</div>

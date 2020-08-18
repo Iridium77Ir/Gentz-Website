@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script defer type="text/javascript" src="//www.cookieconsent.com/releases/3.1.0/cookie-consent.js"></script>
+    <script defer type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","website_name":"Gentz.ch"});
+    });
+    </script>
+    <script defer src="/javascript/slides.js"></script>
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script defer src="/javascript/fileUpload.js"></script>
+    <link id="main-css" rel="stylesheet" href="/stylesheets/main.css">
+    <title>Gentz</title>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <%- include("../partials/header") %>
+        </div>
+        <div class="inner-container">
+            <%- include("../partials/errorMessage") %> 
+            <%- body %> 
+        </div>
+        <div id="footer">
+            <%- include("../partials/footer") %>
+        </div>
+    </div> 
+</body>
+</html>

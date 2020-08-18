@@ -1,0 +1,23 @@
+<h2 class="page-header"><%= member.title %></h2>
+<div class="member-details">
+  <div>
+    <img class="member-image" src="<%= member.memberImagePath %>">
+    <div class="member-details-btn-grid">
+      <a class="btn btn-primary" href="/cp/members/<%= member.id %>/edit">Edit</a>
+      <%- include('../partials/deleteForm', { url: `/cp/members/${member.id}` }) %>
+    </div>
+  </div>
+  <div class="member-details-grid">
+    <div class="member-details-label">First Name:</div>
+    <div><%= member.firstName %></div>
+    <div class="member-details-label">Last Name:</div>
+    <div><%= member.lastName %></div>
+    <div class="member-details-label">Joined:</div>
+    <div><%= member.joined.toDateString() %></div>
+    <div class="member-details-label">Instrumentt:</div>
+    <div><%= member.instrument %></div>
+    <div class="member-details-label">Description:</div>
+    <div><%= member.description %></div>
+  </div>
+</div>
+<p><a href="/cp/members">Go Back</a></p>

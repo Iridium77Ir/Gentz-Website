@@ -1,0 +1,54 @@
+<div class="press-index" id="press">
+    <h3>Über uns:</h3>
+    <p><%= text %></p>
+</div>
+<div class="music">
+    <h3>Unsere Musik:</h3>
+    <div class="music-grid-index" id="music">
+        <% musics.forEach(music => { %>
+            <div class="music-grid-index-content">
+                <ul>
+                    <li><%= music.Title %> </li>
+                    <li><iframe src="<%= music.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                </ul>
+            </div>
+        <% }) %>
+    </div>
+</div>
+<div class="slideshow-top">
+    <div class="slideshow-container1 index-member">
+        <div class="member-grid" id="members">
+            <% members.forEach(member => { %>
+                <div class="Slides1 fade">
+                    <img class="member-image" src="<%= member.memberImagePath %>">
+                    <ul>
+                        <li><h4>Name:</h4></li>
+                        <li><%= member.firstName %> <%= member.lastName %></li>
+                        <li><h4>Instrument/Rolle:</h4></li>
+                        <li><%= member.instrument %></li>
+                        <li><h4>Beigetreten:</h4></li>
+                        <li><%= member.joined.toDateString() %></li>
+                        <li><h4>Beschreibung:</h4></li>
+                        <li><%= member.description %></li>
+                    </ul>
+                </div>
+            <% }) %>
+        </div>
+        <a class="prev1" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next1" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+</div>
+<div class="slideshow-top">
+    <div class="slideshow-container2 index-image">
+        <div class="image-grid" id="images">
+            <% images.forEach(image => { %>
+                <div class="Slides2 fade">
+                    <img class="image-image" src="<%= image.ImagePath %>">
+                </div>
+            <% }) %>
+        </div>
+        <a class="prev2" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next2" onclick="plusSlides(1, 1)">&#10095;</a>
+    </div>
+</div>
+

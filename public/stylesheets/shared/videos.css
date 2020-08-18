@@ -1,0 +1,19 @@
+.music {
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.music-grid-index {
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+.music-grid-index h2 {
+    font-weight: bold;
+}
+.music-grid-index div ul {
+    list-style: none;
+}
+.music-grid-index div ul li {
+    font-size: 1rem;
+    font-weight: bold;
+}
