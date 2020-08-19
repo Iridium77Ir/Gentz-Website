@@ -20,17 +20,26 @@
         <div class="member-grid" id="members">
             <% members.forEach(member => { %>
                 <div class="Slides1 fade">
-                    <img class="member-image" src="<%= member.memberImagePath %>">
-                    <ul>
-                        <li><h4>Name:</h4></li>
-                        <li><%= member.firstName %> <%= member.lastName %></li>
-                        <li><h4>Instrument/Rolle:</h4></li>
-                        <li><%= member.instrument %></li>
-                        <li><h4>Beigetreten:</h4></li>
-                        <li><%= member.joined.toDateString().split(" ")[3] %></li>
-                        <li><h4>Beschreibung:</h4></li>
-                        <li><%= member.description %></li>
-                    </ul>
+                    <div class="member-image-div">
+                        <img class="member-image" onclick="modaldisplay(this)" id="<%= member.lastName %>" src="<%= member.memberImagePath %>">
+                    </div>
+                    <div id="<%= member.lastName %>_Modal" class="modal">
+                        <span onclick="closemodal()" class="close">&times;</span>
+                        <img class="modal-content" id="<%= member.lastName %>_img">
+                        <div class="caption" id="<%= member.lastName %>_caption"></div>
+                    </div>
+                    <div class="member-ul-div">
+                        <ul class="member-ul">
+                            <li><h4>Name:</h4></li>
+                            <li><%= member.firstName %> <%= member.lastName %></li>
+                            <li><h4>Instrument/Rolle:</h4></li>
+                            <li><%= member.instrument %></li>
+                            <li><h4>Beigetreten:</h4></li>
+                            <li><%= member.joined.toDateString().split(" ")[3] %></li>
+                            <li><h4>Beschreibung:</h4></li>
+                            <li><%= member.description %></li>
+                        </ul>
+                    </div>
                 </div>
             <% }) %>
         </div>
@@ -43,7 +52,12 @@
         <div class="image-grid" id="images">
             <% images.forEach(image => { %>
                 <div class="Slides2 fade">
-                    <img class="image-image" src="<%= image.ImagePath %>">
+                    <img onclick="modaldisplay(this)" class="image-image" src="<%= image.ImagePath %>">
+                </div>
+                <div id="_Modal" class="modal">
+                    <span onclick="closemodal()" class="close">&times;</span>
+                    <img class="modal-content-image" id="_img">
+                    <div class="caption" id="_caption"></div>
                 </div>
             <% }) %>
         </div>
@@ -51,7 +65,7 @@
         <a class="next2" onclick="plusSlides(1, 1)">&#10095;</a>
     </div>
 </div>
-<div class="press-index" id="press">
+<div class="press-index" id="contact">
     <h3>Kontakt Information:</h3>
     <p><%= contact %></p>
 </div>

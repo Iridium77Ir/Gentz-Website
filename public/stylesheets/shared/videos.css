@@ -1,9 +1,12 @@
 .music {
-    padding: 1rem;
-    margin-bottom: 2rem;
+    padding: 0.5vw;
+    margin-bottom: 0.5vw;
 }
-.music-grid-index {
-    
+iframe {
+    width: 22vw;
+    height: 14.0vw;
+}
+.music-grid-index {  
     display: flex;
     flex-wrap: wrap;
 }

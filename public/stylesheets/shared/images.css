@@ -20,3 +20,9 @@
 .image-image {
     width: 100%;
 }
+.modal-content-image {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+}

@@ -1,12 +1,17 @@
 #header {
     background-color: #0a91ff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 89;
+    transition: 0.5s;
 }
 .header-class {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 0rem;
     margin-left: 1rem;
     margin-right: 1rem;
     font-weight: bold;

@@ -11,6 +11,8 @@
     </script>
     <script defer src="/javascript/slides.js"></script>
     <script defer src="/javascript/top.js"></script>
+    <script defer src="/javascript/scroll.js"></script>
+    <script defer src="/javascript/openimage.js"></script>
     <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
     <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
@@ -26,10 +28,12 @@
         <div id="header">
             <%- include("../partials/header") %>
         </div>
+        <div class="br"></div>
         <div class="inner-container">
             <%- include("../partials/errorMessage") %> 
             <%- body %> 
         </div>
+        <div class="br"></div>
         <div id="footer">
             <%- include("../partials/footer") %>
         </div>
