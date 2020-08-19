@@ -7,6 +7,7 @@ const Image = require('../models/images')
 
 router.get("/", async (req, res) => {
     var text = fs.readFileSync(__dirname + "/cp/press.md")
+    var contact = fs.readFileSync(__dirname + "/cp/contact.md")
     music = await Music.find()
     members = await Member.find()
     images = await Image.find()
@@ -14,7 +15,8 @@ router.get("/", async (req, res) => {
         text: text,
         musics: music,
         members: members,
-        images: images
+        images: images,
+        contact: contact
     })
 })
 
