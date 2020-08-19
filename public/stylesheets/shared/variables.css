@@ -1,0 +1,8 @@
+:root {
+    --main-color: #0a91ff;
+    --secondary-color: white;
+    --image-width: 800px;
+    --image-width-large: 800px;
+    --image-aspect-ratio: 0.75;
+    font-family: sans-serif;
+}

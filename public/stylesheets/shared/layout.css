@@ -1,0 +1,16 @@
+.br {
+    margin-top: 50px;
+    padding: 50px;
+}
+@media (max-width: 710px) {
+    .br {
+        margin-top: 60px;
+        padding: 30px;
+    }
+}
+@media (max-width: 553px) {
+    .br {
+        margin-top: 75px;
+        padding: 37px;
+    }
+}
