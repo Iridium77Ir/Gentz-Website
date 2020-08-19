@@ -1,6 +1,13 @@
-* {box-sizing: border-box}
-.Slides1, .Slides2 {display: none}
-img {vertical-align: middle;}
+* {
+  box-sizing: border-box
+}
+.Slides1, .Slides2 {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
 
 /* Next & previous buttons */
 .prev, .next {
@@ -18,7 +25,6 @@ img {vertical-align: middle;}
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next2 {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -28,8 +34,6 @@ img {vertical-align: middle;}
   border-radius: 3px 0 0 3px;
 }
 
-
-/* On hover, add a grey background color */
 .prev1:hover, .next1:hover {
   background-color: var(--secondary-color);
   color: black;
