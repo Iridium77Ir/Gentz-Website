@@ -5,4 +5,7 @@
     --image-width-large: 800px;
     --image-aspect-ratio: 0.75;
     font-family: sans-serif;
+    --font-size-title: 35px;
+    --font-size-headersubtitle: 16px;
+    --font-size-standard: 17px;
 }

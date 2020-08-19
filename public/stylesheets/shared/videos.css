@@ -2,7 +2,7 @@
     padding: 0.5vw;
     margin-bottom: 0.5vw;
 }
-iframe {
+embed {
     width: 22vw;
     height: 14.0vw;
 }
@@ -17,6 +17,6 @@ iframe {
     list-style: none;
 }
 .music-grid-index div ul li {
-    font-size: 1rem;
+    font-size: var(--font-size-standard);
     font-weight: bold;
 }

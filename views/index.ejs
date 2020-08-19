@@ -9,7 +9,7 @@
             <div class="music-grid-index-content">
                 <ul>
                     <li><%= music.Title %> </li>
-                    <li><iframe src="<%= music.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                    <li><div><embed src="<%= music.link %>" type="video/mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div></li>
                 </ul>
             </div>
         <% }) %>
