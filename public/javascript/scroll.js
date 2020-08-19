@@ -7,7 +7,7 @@ window.onscroll = function() {
     document.getElementById("header").style.top = "-300px";
   }
   prevScrollpos = currentScrollPos;
-  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight + 200) {
+  if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
       document.getElementById("footer").style.display = "block"
   } else {
       document.getElementById("footer").style.display = "none"
