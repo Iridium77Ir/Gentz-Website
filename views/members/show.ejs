@@ -1,7 +1,7 @@
 <h2 class="page-header"><%= member.title %></h2>
 <div class="member-details">
   <div>
-    <img class="member-image" src="<%= member.memberImagePath %>">
+    <img class="member-image images-cp" src="<%= member.memberImagePath %>">
     <div class="member-details-btn-grid">
       <a class="btn btn-primary" href="/cp/members/<%= member.id %>/edit">Edit</a>
       <%- include('../partials/deleteForm', { url: `/cp/members/${member.id}` }) %>
