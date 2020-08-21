@@ -34,7 +34,6 @@ router.post("/new", async (req, res) => {
     }
     var img = req.body.image
     for (var i =0; i < img.length; i++) {
-
       var image = new Image({
       })
       saveImage(image, img[i])

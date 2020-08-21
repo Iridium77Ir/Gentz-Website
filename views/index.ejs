@@ -1,58 +1,12 @@
-<div class="md-index" id="press">
-    <h3>Über uns:</h3>
-    <p><%= text %></p>
-</div>
-<div class="music">
-    <h3>Unsere Musik:</h3>
-    <div class="music-grid-index" id="music">
-        <% musics.forEach(music => { %>
-            <div class="music-grid-index-content">
-                <ul>
-                    <li><%= music.Title %> </li>
-                    <li><div><embed src="<%= music.link %>" type="video/mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div></li>
-                </ul>
-            </div>
-        <% }) %>
-    </div>
-</div>
-<div class="slideshow-top">
-    <div class="slideshow-container1 index-member">
-        <div class="member-grid" id="members">
-            <% members.forEach(member => { %>
-                <div class="Slides1 fade">
-                    <div class="member-image-div">
-                        <img class="member-image" onclick="modaldisplay(this)" id="<%= member.lastName %>" src="<%= member.memberImagePath %>">
-                    </div>
-                    <div id="<%= member.lastName %>_Modal" class="modal">
-                        <span onclick="closemodal()" class="close">&times;</span>
-                        <img class="modal-content" id="<%= member.lastName %>_img">
-                        <div class="caption" id="<%= member.lastName %>_caption"></div>
-                    </div>
-                    <div class="member-ul-div">
-                        <ul class="member-ul">
-                            <li><h4>Name:</h4></li>
-                            <li><%= member.firstName %> <%= member.lastName %></li>
-                            <li><h4>Instrument/Rolle:</h4></li>
-                            <li><%= member.instrument %></li>
-                            <li><h4>Beigetreten:</h4></li>
-                            <li><%= member.joined.toDateString().split(" ")[3] %></li>
-                            <li><h4>Beschreibung:</h4></li>
-                            <li><%= member.description %></li>
-                        </ul>
-                    </div>
-                </div>
-            <% }) %>
-        </div>
-        <a class="prev1" onclick="plusSlides(-1, 0)">&#10094;</a>
-        <a class="next1" onclick="plusSlides(1, 0)">&#10095;</a>
-    </div>
-</div>
 <div class="slideshow-top">
     <div class="slideshow-container2 index-image">
         <div class="image-grid" id="images">
             <% images.forEach(image => { %>
                 <div class="Slides2 fade">
                     <img onclick="modaldisplay(this)" class="image-image" src="<%= image.ImagePath %>">
+                    <div class="md-index" id="press">
+                        <%= text %>
+                    </div>
                 </div>
                 <div id="_Modal" class="modal">
                     <span onclick="closemodal()" class="close">&times;</span>
@@ -65,8 +19,79 @@
         <a class="next2" onclick="plusSlides(1, 1)">&#10095;</a>
     </div>
 </div>
-<div class="md-index" id="contact">
-    <h3>Kontakt Information:</h3>
-    <p><%= contact %></p>
+<div class="inner-inner-container">
+    <div class="music">
+        <div class="centered">
+            <h3>Unsere Musik:</h3>
+        </div>
+        <hr>
+        <div class="music-grid-index" id="music">
+            <% musics.forEach(music => { %>
+                <div class="music-grid-index-content">
+                    <ul>
+                        <li><%= music.Title %> </li>
+                        <li><div><embed src="<%= music.link %>" type="video/mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></div></li>
+                    </ul>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+    <div class="centered">
+        <h3>Unsere Mitglieder:</h3>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="slideshow-top">
+        <div class="slideshow-container1 index-member">
+            <div class="member-grid" id="members">
+                <% members.forEach(member => { %>
+                    <div class="Slides1 fade">
+                        <div class="member-image-div">
+                            <img class="member-image" onclick="modaldisplay(this)" id="<%= member.lastName %>" src="<%= member.memberImagePath %>">
+                        </div>
+                        <div id="<%= member.lastName %>_Modal" class="modal">
+                            <span onclick="closemodal()" class="close">&times;</span>
+                            <img class="modal-content" id="<%= member.lastName %>_img">
+                            <div class="caption" id="<%= member.lastName %>_caption"></div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="member-ul-div">
+                            <ul class="member-ul">
+                                <li class="centered"><h4>Name:</h4></li>
+                                <br>
+                                <li><%= member.firstName %> <%= member.lastName %></li>
+                                <br>
+                                <li class="centered"><h4>Instrument/Rolle:</h4></li>
+                                <br>
+                                <li><%= member.instrument %></li>
+                                <br>
+                                <li class="centered"><h4>Beigetreten:</h4></li>
+                                <br>
+                                <li><%= member.joined.toDateString().split(" ")[3] %></li>
+                                <br>
+                                <li class="centered"><h4>Beschreibung:</h4></li>
+                                <br>
+                                <li><%= member.description %></li>
+                                <br>
+                            </ul>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            <a class="prev1" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next1" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+    </div>
+    <div class="centered">
+        <h3>Kontaktinformation:</h3>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="md-index" id="contact">
+        <p><%= contact %></p>
+    </div>
 </div>
-

@@ -1,7 +1,6 @@
 .slideshow-container2 {
-    max-width: 80%;
+    top: 0;
     position: relative;
-    margin: auto;
 }
 .prev2, .next2 {
     cursor: pointer;
@@ -25,4 +24,9 @@
     display: block;
     width: 80%;
     max-width: 1000px;
+}
+.Slides2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }

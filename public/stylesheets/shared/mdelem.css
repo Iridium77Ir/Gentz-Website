@@ -4,3 +4,14 @@
 .md-index p {
     margin-left: 3rem;
 }
+
+#press {
+    mix-blend-mode: difference;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--secondary-color);
+    font-size: 5vw;
+    font-weight: light;
+}

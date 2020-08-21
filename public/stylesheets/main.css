@@ -28,6 +28,12 @@ html {
 .inner-container {
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    justify-content: center;
+}
+.inner-inner-container {
+    margin-left: auto;
+    margin-right: auto;
     width: 80%;
     justify-content: center;
 }

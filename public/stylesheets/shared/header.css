@@ -1,11 +1,12 @@
 #header {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 89;
     transition: 0.5s;
     font-size: var(--font-size-headersubtitle);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .header-class {
     display: flex;
@@ -15,8 +16,7 @@
     margin-bottom: 0rem;
     margin-left: 1vw;
     margin-right: 1vw;
-    font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--main-color);
     
 }
 .header-title {
@@ -30,6 +30,10 @@ header ul {
 header ul li {
     padding: 0.7vw;
 }
+header ul li:hover {
+    padding: 0.7vw;
+    color: var(--main-color-darker);
+}
 header a {
     text-decoration: none;
 }
@@ -38,4 +42,24 @@ a:link {
 }
 a:visited {
     color: inherit;
+}
+
+/* section for burger menu */
+.burger-menu {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0rem;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: var(--main-color);
+}
+.nav-links-burger {
+    display: none;
+}
+.burger-icon {
+    display: none;
+    padding-right: 1vw;
 }

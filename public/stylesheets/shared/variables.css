@@ -1,10 +1,12 @@
 :root {
-    --main-color: #0a91ff;
-    --secondary-color: white;
+    --main-color: hsl(207, 100%, 53%);
+    --main-color-darker: hsl(207, 100%, 40%);
+    --secondary-color: hsl(207, 0%, 100%);
+    --secondary-color-darker: hsl(207, 0%, 80%);
     --image-width: 800px;
     --image-width-large: 800px;
     --image-aspect-ratio: 0.75;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     --font-size-title: 35px;
     --font-size-headersubtitle: 16px;
     --font-size-standard: 17px;
