@@ -12,6 +12,10 @@ const pressRouter = require('./cp/press')
 router.use('/press', pressRouter)
 const contactRouter = require('./cp/contact')
 router.use('/contact', contactRouter)
+const introRouter = require('./cp/intro')
+router.use('/intro', introRouter)
+const introImagesRouter = require('./cp/introImages')
+router.use('/introImages', introImagesRouter)
 
 router.get("/", async (req, res) => {
     var cook = checkCookie(req)

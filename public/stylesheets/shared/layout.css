@@ -10,6 +10,11 @@
     .burger-icon {
         display: block;
     }
+    .introImage-introImage {
+        overflow: hidden;
+        width: auto;
+        height: 80vh;
+    }
 }
 .centered {
     text-align: center;

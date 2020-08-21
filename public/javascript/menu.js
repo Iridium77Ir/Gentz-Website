@@ -8,3 +8,8 @@ function openMenu() {
         }
     } 
 }
+
+if (window.location.pathname.substring(0,3) === "/cp") {
+    document.getElementById("incont").style.marginTop = "100px"
+    document.getElementById("incont").style.marginBottom = "100px"
+}

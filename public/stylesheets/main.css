@@ -7,8 +7,8 @@
 @import "shared/videos.css";
 @import "shared/images.css";
 @import "shared/filepond.css";
-@import "shared/top-button.css";
 @import "shared/layout.css";
+@import "shared/introImages.css";
 
 body {
     padding:0;

@@ -1,25 +1,23 @@
-<div class="slideshow-top">
-    <div class="slideshow-container2 index-image">
-        <div class="image-grid" id="images">
-            <% images.forEach(image => { %>
-                <div class="Slides2 fade">
-                    <img onclick="modaldisplay(this)" class="image-image" src="<%= image.ImagePath %>">
-                    <div class="md-index" id="press">
-                        <%= text %>
+<div class="index-image">
+        <div class="introImage-grid" id="introImages">
+            <% introimages.forEach(introimage => { %>
+                <div class="fade">
+                    <img class="introImage-introImage" src="<%= introimage.ImagePath %>">
+                    <div class="md-index" id="intro">
+                        <%= intro %>
                     </div>
-                </div>
-                <div id="_Modal" class="modal">
-                    <span onclick="closemodal()" class="close">&times;</span>
-                    <img class="modal-content-image" id="_img">
-                    <div class="caption" id="_caption"></div>
                 </div>
             <% }) %>
         </div>
-        <a class="prev2" onclick="plusSlides(-1, 1)">&#10094;</a>
-        <a class="next2" onclick="plusSlides(1, 1)">&#10095;</a>
-    </div>
 </div>
 <div class="inner-inner-container">
+    <div class="centered">
+        <h3>Presse text:</h3>
+    </div>
+    <hr>
+    <div class="md-index" id="press">
+        <p><%= text %></p>
+    </div>
     <div class="music">
         <div class="centered">
             <h3>Unsere Musik:</h3>
@@ -60,19 +58,49 @@
                         <br>
                         <div class="member-ul-div">
                             <ul class="member-ul">
-                                <li class="centered"><h4>Name:</h4></li>
-                                <br>
                                 <li><%= member.firstName %> <%= member.lastName %></li>
-                                <br>
-                                <li class="centered"><h4>Instrument/Rolle:</h4></li>
                                 <br>
                                 <li><%= member.instrument %></li>
                                 <br>
-                                <li class="centered"><h4>Beigetreten:</h4></li>
-                                <br>
                                 <li><%= member.joined.toDateString().split(" ")[3] %></li>
                                 <br>
-                                <li class="centered"><h4>Beschreibung:</h4></li>
+                                <li><%= member.description %></li>
+                                <br>
+                            </ul>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            <a class="prev1" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next1" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="slideshow-top">
+        <div class="slideshow-container2 index-image">
+            <div class="image-grid" id="images">
+                <% members.forEach(member => { %>
+                    <div class="Slides2 fade">
+                        <div class="image-image-div">
+                            <img class="image-image" onclick="modaldisplay(this)" id="<%= image.lastName %>" src="<%= member.memberImagePath %>">
+                        </div>
+                        <div id="<%= member.lastName %>_Modal" class="modal">
+                            <span onclick="closemodal()" class="close">&times;</span>
+                            <img class="modal-content" id="<%= member.lastName %>_img">
+                            <div class="caption" id="<%= member.lastName %>_caption"></div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="member-ul-div">
+                            <ul class="member-ul">
+                                <li><%= member.firstName %> <%= member.lastName %></li>
+                                <br>
+                                <li><%= member.instrument %></li>
+                                <br>
+                                <li><%= member.joined.toDateString().split(" ")[3] %></li>
                                 <br>
                                 <li><%= member.description %></li>
                                 <br>

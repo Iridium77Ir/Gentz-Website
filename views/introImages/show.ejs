@@ -1,0 +1,10 @@
+<h2 class="page-header">Image:</h2>
+<div class="image-details">
+  <div>
+    <img class="image-image" src="<%= image.ImagePath %>">
+    <div class="image-details-btn-grid">
+      <%- include('../partials/deleteForm', { url: `/cp/introImages/${image.id}` }) %>
+    </div>
+  </div>
+</div>
+<p><a href="/cp/introImages">Go Back</a></p>
