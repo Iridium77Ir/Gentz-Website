@@ -1,24 +1,8 @@
 <div class="index-image">
         <div class="introImage-grid" id="introImages">
             <% introimages.forEach(introimage => { %>
-                <div class="parallax" id="<%= introimage.ImagePath %>">
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
+                <div class="fade" id="<%= introimage.ImagePath %>">
+                    <img src="<%= introimage.ImagePath %>" class="introImage-introImage">
                     <div class="md-index" id="intro">
                         <%= intro %>
                     </div>
