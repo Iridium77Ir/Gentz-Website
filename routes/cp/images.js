@@ -99,7 +99,7 @@ function checkCookie(req) {
 function saveImage(image, imageEncoded) {
     if (imageEncoded == null) return
     const _image = JSON.parse(imageEncoded)
-    if (image != null && imageMimeTypes.includes(_image.type)) {
+    if (_image != null && imageMimeTypes.includes(_image.type)) {
       image.Image = new Buffer.from(_image.data, 'base64')
       image.ImageType = _image.type
     }

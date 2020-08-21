@@ -1,5 +1,5 @@
 const rootStyles = window.getComputedStyle(document.documentElement)
-if (rootStyles.getPropertyValue('--image-width-large') != null && rootStyles.getPropertyValue('--image-width-large') !== '') {
+if (rootStyles.getPropertyValue('--memberimage-width-large') != null && rootStyles.getPropertyValue('--memberimage-width-large') !== '') {
   ready()
 } else {
   document.getElementById('main-css').addEventListener('load', (event) => {
@@ -8,21 +8,26 @@ if (rootStyles.getPropertyValue('--image-width-large') != null && rootStyles.get
 }
 
 function ready() {
-  const coverWidth = parseFloat(rootStyles.getPropertyValue('--image-width-large'))
-  const coverAspectRatio = parseFloat(rootStyles.getPropertyValue('--image-aspect-ratio'))
+  const coverWidth = parseFloat(rootStyles.getPropertyValue('--memberimage-width-large'))
+  const coverAspectRatio = parseFloat(rootStyles.getPropertyValue('--memberimage-aspect-ratio'))
   const coverHeight = coverWidth / coverAspectRatio
   FilePond.registerPlugin(
     FilePondPluginImagePreview,
     FilePondPluginImageResize,
     FilePondPluginFileEncode,
+    FilePondPluginImageCrop,
+    FilePondPluginImageTransform
   )
 
   FilePond.setOptions({
     allowImageResize: true,
-    imageREsizeMode: "force",
+    imageResizeMode: "cover",
     stylePanelAspectRatio: 1 / coverAspectRatio,
     imageResizeTargetWidth: coverWidth,
-    imageResizeTargetHeight: coverHeight
+    imageResizeTargetHeight: coverHeight,
+    allowImageCrop: true,
+    imageCropAspectRatio: coverAspectRatio,
+    allowImageTransform: true
   })
   
   FilePond.parse(document.body)

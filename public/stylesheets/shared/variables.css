@@ -3,9 +3,12 @@
     --main-color-darker: hsl(207, 100%, 40%);
     --secondary-color: hsl(207, 0%, 100%);
     --secondary-color-darker: hsl(207, 0%, 80%);
-    --image-width: 800px;
-    --image-width-large: 800px;
-    --image-aspect-ratio: 0.75;
+    --memberimage-width: 800px;
+    --memberimage-width-large: 800px;
+    --memberimage-aspect-ratio: 1.333333;
+    --imageimage-width: 1000px;
+    --imageimage-width-large: 1000px;
+    --imageimage-aspect-ratio: 0.5625;
     font-family: 'Poppins', sans-serif;
     --font-size-title: 35px;
     --font-size-headersubtitle: 16px;

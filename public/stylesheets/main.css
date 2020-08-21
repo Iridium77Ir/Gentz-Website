@@ -9,6 +9,7 @@
 @import "shared/filepond.css";
 @import "shared/layout.css";
 @import "shared/introImages.css";
+@import "shared/imageUpload.css";
 
 body {
     padding:0;
