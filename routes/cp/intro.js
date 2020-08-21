@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     }
     var text = fs.readFileSync(__dirname + "/intro.md")
     try {
-        res.render("press/index", {
+        res.render("intro/index", {
             text: text
         })
     } catch (err) {
@@ -23,7 +23,7 @@ router.get('/edit', async (req, res) => {
     }
     var text = fs.readFileSync(__dirname + "/intro.md")
     try {
-      res.render("press/edit", {
+      res.render("intro/edit", {
           text: text
       })
     } catch {
@@ -39,7 +39,7 @@ router.put('/:id', async (req, res) => {
     var text = req.body.text
     try {
         fs.writeFileSync(__dirname + "/intro.md", text)
-        res.render("press/index", {
+        res.render("intro/index", {
             text: text
         })
     } catch {
