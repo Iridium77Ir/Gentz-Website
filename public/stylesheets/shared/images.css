@@ -18,6 +18,7 @@
   }
 .image-image {
     width: 100%;
+    cursor: pointer;
 }
 .modal-content-image {
     margin: auto;
