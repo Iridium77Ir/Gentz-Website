@@ -78,24 +78,26 @@
     <br>
     <hr>
     <br>
-    <div class="slideshow-top">
-        <div class="slideshow-container2 index-image">
-            <div class="image-grid" id="images">
-                <% images.forEach(image => { %>
-                    <div class="Slides2 fade">
-                        <img onclick="modaldisplay(this)" class="image-image" src="<%= image.ImagePath %>">
-                    </div>
-                    <div id="_Modal" class="modal">
-                        <span onclick="closemodal()" class="close">&times;</span>
-                        <img class="modal-content-image" id="_img">
-                        <div class="caption" id="_caption"></div>
-                    </div>
-                <% }) %>
-            </div>
-            <a class="prev2" onclick="plusSlides(-1, 1)">&#10094;</a>
-            <a class="next2" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+<div class="slideshow-top">
+    <div class="slideshow-container2 index-image">
+        <div class="image-grid" id="images">
+            <% images.forEach(image => { %>
+                <div class="Slides2 fade">
+                    <img onclick="modaldisplay(this)" class="image-image" src="<%= image.ImagePath %>">
+                </div>
+                <div id="_Modal" class="modal">
+                    <span onclick="closemodal()" class="close">&times;</span>
+                    <img class="modal-content-image" id="_img">
+                    <div class="caption" id="_caption"></div>
+                </div>
+            <% }) %>
         </div>
+        <a class="prev2" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next2" onclick="plusSlides(1, 1)">&#10095;</a>
     </div>
+</div>
+<div class="inner-inner-container">
     <div class="centered">
         <h3>Kontaktinformation:</h3>
     </div>
