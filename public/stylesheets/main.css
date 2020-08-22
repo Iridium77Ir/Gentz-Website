@@ -20,7 +20,7 @@ body {
 }
 html {
     scroll-behavior: smooth;
-    background-color: white;
+    background-color: var(--secondary-color);
     height: 100%;
 }
 .container {
