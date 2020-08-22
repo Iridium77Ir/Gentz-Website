@@ -27,7 +27,9 @@ function ready() {
     imageResizeTargetHeight: coverHeight,
     allowImageCrop: true,
     imageCropAspectRatio: coverAspectRatio,
-    allowImageTransform: true
+    allowImageTransform: true,
+    imageTransformOutputQualityMode: "optional",
+    imageTransformOutputQuality: 60
   })
   
   FilePond.parse(document.body)
