@@ -10,6 +10,7 @@
 @import "shared/layout.css";
 @import "shared/introImages.css";
 @import "shared/imageUpload.css";
+@import "shared/fonts.css";
 
 body {
     padding:0;

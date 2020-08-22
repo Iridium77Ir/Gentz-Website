@@ -6,6 +6,7 @@
 }
 
 #intro {
+    font-family: 'SFSportsNight', 'sans-serif';
     mix-blend-mode: difference;
     position: absolute;
     top:50%;
