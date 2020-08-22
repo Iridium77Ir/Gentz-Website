@@ -13,7 +13,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--secondary-color);
-    font-size: 7vw;
+    font-size: 12vw;
     font-weight: light;
     text-align: center;
 }
