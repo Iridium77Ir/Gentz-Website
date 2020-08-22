@@ -1,8 +1,8 @@
 <div class="index-image">
         <div class="introImage-grid" id="introImages">
             <% introimages.forEach(introimage => { %>
-                <div class="fade">
-                    <img class="introImage-introImage" src="<%= introimage.ImagePath %>">
+                <div class="fade" id="<%= introimage.ImagePath %>">
+                    <img src="<%= introimage.ImagePath %>" class="introImage-introImage">
                     <div class="md-index" id="intro">
                         <%= intro %>
                     </div>
