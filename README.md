@@ -6,4 +6,5 @@ To use this website add a ".env" file: PORT=?
                                        ADMIN_USER="?"
                                        ADMIN_PASS="?"
                                        DATABASE_URL="mongodb://?/?"
+                                       COOKIE_SECRET="?"
 And add a "press.md", "intro.md" and "contact.md" file to the /routes/cp folder.

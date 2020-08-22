@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
 
             var options = {
                 httpOnly: true,
-                signed: false
+                signed: true
             }
             res.cookie("loggedin", true, options)
             res.redirect("cp/admin")
@@ -64,7 +64,7 @@ router.get("/removecookie", async (req, res) => {
 })
 
 function checkCookie(req) {
-    if (req.cookies.loggedin == "true") {
+    if (req.signedCookies['loggedin'] == "true") {
         return true
     } else {
         return false

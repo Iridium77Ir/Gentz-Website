@@ -135,13 +135,12 @@ router.delete('/:id', async (req, res) => {
 })
 
 function checkCookie(req) {
-  if (req.cookies.loggedin == "true") {
+  if (req.signedCookies['loggedin'] == "true") {
       return true
   } else {
       return false
   }
 }
-
 function saveImage(member, imageEncoded) {
     if (imageEncoded == null) return
     const image = JSON.parse(imageEncoded)
