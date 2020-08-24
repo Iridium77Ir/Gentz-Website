@@ -1,1 +1,1 @@
-Gentz ist eine siebenköpfige Bänd aus Wien.
+Gentz
