@@ -4,7 +4,7 @@ Website for the band gentz
 
 To use this website add a ".env" file: 
 
-PORT=?
+PORT=?(Number ex: 3006)
 ADMIN_USER="?"
 ADMIN_PASS="?"
 DATABASE_URL="mongodb://?/?"
