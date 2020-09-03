@@ -59,7 +59,7 @@ router.get('/search/:id', async (req, res) => {
                              .populate('image')
                              .exec()
       res.render('introImages/show', { image: image })
-    } catch {
+    } catch (e) {
       res.redirect('/')
     }
 })
@@ -73,7 +73,7 @@ router.delete('/:id', async (req, res) => {
       image = await Image.findById(req.params.id)
       await image.remove()
       res.redirect('/cp/introImages')
-    } catch {
+    } catch (e) {
       if (image != null) {
         res.render('introImages/show', {
           image: image,

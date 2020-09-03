@@ -60,7 +60,7 @@ router.delete('/:id', async (req, res) => {
       music = await Music.findById(req.params.id)
       await music.remove()
       res.redirect('/cp/music')
-    } catch {
+    } catch (e) {
       if (music != null) {
         res.render('music/index', {
           errorMessage: 'Could not remove member'

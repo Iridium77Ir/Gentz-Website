@@ -26,7 +26,7 @@ router.get('/edit', async (req, res) => {
       res.render("contact/edit", {
           text: text
       })
-    } catch {
+    } catch (e) {
       res.redirect('/')
     }
 })
@@ -42,7 +42,7 @@ router.put('/:id', async (req, res) => {
         res.render("contact/index", {
             text: text
         })
-    } catch {
+    } catch (e) {
         res.redirect('/')
     }
 })

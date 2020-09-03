@@ -62,7 +62,7 @@ router.get('/search/:id', async (req, res) => {
                              .populate('member')
                              .exec()
       res.render('members/show', { member: member })
-    } catch {
+    } catch (e) {
       res.redirect('/')
     }
 })
@@ -77,7 +77,7 @@ router.get('/:id/edit', async (req, res) => {
       res.render("members/edit", {
           member: member
       })
-    } catch {
+    } catch (e) {
       res.redirect('/')
     }
 })
@@ -101,7 +101,7 @@ router.put('/:id', async (req, res) => {
       }
       await member.save()
       res.redirect(`/cp/members/search/${member.id}`)
-    } catch {
+    } catch (e) {
       if (member != null) {
         res.render("members/edit", {
             errorMessage: "Failed to edit Member"
@@ -122,7 +122,7 @@ router.delete('/:id', async (req, res) => {
       member = await Member.findById(req.params.id)
       await member.remove()
       res.redirect('/cp/members')
-    } catch {
+    } catch (e) {
       if (member != null) {
         res.render('members/show', {
           member: member,
